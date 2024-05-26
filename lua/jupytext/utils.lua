@@ -24,7 +24,7 @@ M.get_ipynb_metadata = function(filename)
 end
 
 M.get_jupytext_file = function(filename, extension)
-  local fileroot = vim.fn.fnamemodify(filename, ":r")
+  local fileroot = vim.fn.fnamemodify("." .. filename, ":r")
   return fileroot .. "." .. extension
 end
 
