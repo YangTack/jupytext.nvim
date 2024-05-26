@@ -107,6 +107,8 @@ local read_from_ipynb = function(ipynb_filename)
     pattern = "<buffer>",
     group = "jupytext-nvim",
     callback = function(ev)
+      print(vim.inspect(ev.match))
+      print(vim.inspect(should_delete))
       cleanup(ev.match, should_delete)
     end,
   })
