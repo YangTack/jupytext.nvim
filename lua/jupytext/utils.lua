@@ -26,7 +26,7 @@ end
 M.get_jupytext_file = function(filename, extension)
   local fn = vim.fn.fnamemodify(filename, ":t")
   local path = vim.fn.fnamemodify(filename, ":h")
-  local fileroot = vim.fn.fnamemodify(path .. "." .. fn, ":r")
+  local fileroot = vim.fn.fnamemodify(path .. "/." .. fn, ":r")
   return fileroot .. "." .. extension
 end
 
